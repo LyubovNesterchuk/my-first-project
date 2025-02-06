@@ -1,0 +1,290 @@
+body {
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: #111;
+  background-color: #fafafa;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  font-family: "Montserrat", serif;
+  cursor: pointer;
+}
+.orange {
+  color: #fd9222;
+}
+/* #region Header */
+.header {
+}
+.logo {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.11;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #111;
+}
+.logo-style {
+  font-style: normal;
+}
+.nav-header {
+}
+.header-nav-list {
+}
+.nav-header-item {
+}
+.item-nav-link {
+  font-weight: 500;
+  line-height: 1.14;
+  color: #111;
+}
+
+.item-nav-link:hover,
+.item-nav-link:focus {
+  color: #fd9222;
+}
+/* #endregion Header */
+
+/* #region Hero section*/
+.hero {
+  background: #1e1823;
+}
+.hero-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+.hero-button {
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  background-color: #fd9222;
+}
+.hero-button:hover,
+.hero-button:focus {
+  color: #fd9222;
+  background-color: #fcf1e0;
+}
+.hero-link-made {
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+}
+
+.hero-link-made:hover,
+.hero-link-made:focus {
+  color: #fd9222;
+}
+
+.hero-link-footer {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+.hero-link-footer:hover,
+.hero-link-footer:focus {
+  color: #fd9222;
+}
+/* #endregion Hero section*/
+
+/* #region Benefits section */
+.benefits-section {
+  background: #1e1823;
+}
+.benefits-list {
+}
+.benefits-list-item {
+}
+.benefits-item-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+}
+.benefits-item-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+/* #endregion Benefits section */
+
+/* #region Ingredients */
+.ingredients-section {
+}
+.ingredients-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.ingredients-text {
+  text-align: center;
+}
+.ingredients-list {
+}
+.ingredients-list-item {
+  background: #fd9222;
+}
+
+.ingredients-item-desc {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* .ingredients-list-item m {
+  background-color: #fff;
+}
+.ingredients-item-desc m {
+  color: #111;
+}
+.ingredients-list-item n {
+  background-color: #1e1823;
+}
+.ingredients-item-desc n {
+  color: #fff;
+}
+.ingredients-list-item s {
+  background-color: #fff;
+}
+.ingredients-item-desc s {
+color: #111;
+} */
+/* #endregion Ingredients */
+
+/* #region How it's made? */
+.made-section {
+  background-color: #fff;
+}
+.made-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.16667;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #111;
+}
+.made-subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33333;
+  color: #111;
+}
+.made-list {
+  list-style-type: disc;
+}
+.made-list-item {
+}
+.made-item-text {
+}
+/* #endregion How it's made? */
+
+/* #region Chocolate is loved */
+.chocolate-section {
+}
+.chocolate-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.16667;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #111;
+}
+.chocolate-list {
+}
+.chocolate-list-item {
+}
+.chocolate-item-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  text-align: center;
+  color: #111;
+}
+.chocolate-item-text {
+  text-align: center;
+  color: rgba(17, 17, 17, 0.7);
+}
+.chocolate-button {
+  font-weight: 600;
+  font-size: 18px;
+  color: #111;
+}
+.chocolate-button:hover,
+.chocolate-button:focus {
+  color: #fff;
+  background-color: #fd9222;
+}
+/* #endregion Chocolate is loved */
+
+/* #region Footer */
+.footer {
+  background-color: #1e1823;
+}
+.footer-text {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.footer-desc {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-address {
+}
+.footer-address-list {
+}
+.footer-address-item {
+}
+.footer-address-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #fff;
+  font-style: normal;
+}
+.footer-address-link:hover,
+.footer-address-link:focus {
+  color: #fd9222;
+}
+.nav-footer .item-nav-link {
+  color: #fff;
+}
+.nav-footer .item-nav-link:hover,
+.nav-footer .item-nav-link:focus {
+  color: #fd9222;
+}
+.footer-nav-list {
+}
+.nav-footer-item {
+}
+
+/* #endregion Footer */
