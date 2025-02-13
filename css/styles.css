@@ -7,14 +7,28 @@ body {
   color: #111;
   background-color: #fafafa;
 }
+/* reset */
+h1, h2, h3, h4, h5, h6, p {
+  margin o;
+}
 
 ul,
 ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
+
+img {
+display: block;
+max-width: 100%;
+}
+
 button {
   font-family: "Montserrat", serif;
   cursor: pointer;
@@ -22,10 +36,23 @@ button {
 .orange {
   color: #fd9222;
 }
-/* #region Header */
-.header {
+/* common */
+.container {
+  max-width: 1166px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
+
+/* #region Header */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .logo {
+  display: block;
+  padding: 30px 0;
   font-style: italic;
   font-weight: 700;
   font-size: 18px;
@@ -34,16 +61,26 @@ button {
   text-transform: uppercase;
   color: #111;
 }
+
 .logo-style {
   font-style: normal;
 }
+
 .nav-header {
 }
+
 .header-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
+
 .nav-header-item {
 }
+
 .item-nav-link {
+  display: block;
+  padding: 30px 0;
   font-weight: 500;
   line-height: 1.14;
   color: #111;
@@ -58,43 +95,74 @@ button {
 /* #region Hero section*/
 .hero {
   background: #1e1823;
+  padding-top: 375px;
+  padding-bottom: 46px;
+  margin-bottom: 72px;
+  border-radius: 30px;
 }
+
 .hero-title {
+  max-width: 484px;
+  margin-bottom: 32px;
   font-weight: 500;
   font-size: 28px;
   line-height: 1.21;
   letter-spacing: -0.03em;
   color: #fff;
 }
+
+.hero-buttons{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+ }
+
 .hero-button {
+    display: block;
+  background-color: #fd9222;
+  border-radius: 100px;
+  padding: 14px 40px;
+  min-width: 144px;
+  height: 45px;
   font-weight: 600;
   font-size: 14px;
   color: #fff;
-  background-color: #fd9222;
+  text-align: center;
 }
+
 .hero-button:hover,
 .hero-button:focus {
   color: #fd9222;
   background-color: #fcf1e0;
 }
+
 .hero-link-made {
-  font-weight: 600;
-  font-size: 14px;
-  color: #fff;
-}
+display: block;
+padding: 14px 40px;
+min-width: 183px;
+height: 45px;
+border: 1px solid #fff;
+border-radius: 100px;
+font-weight: 600;
+font-size: 14px;
+color: #fff;
+text-align: center;}
 
 .hero-link-made:hover,
 .hero-link-made:focus {
   color: #fd9222;
 }
 
-.hero-link-footer {
+.hero-link-down {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.28571;
   letter-spacing: -0.03em;
   color: #fff;
-}
+  margin: 0 auto;
+  border: none;
+ }
+
 .hero-link-footer:hover,
 .hero-link-footer:focus {
   color: #fd9222;
@@ -104,10 +172,32 @@ button {
 /* #region Benefits section */
 .benefits-section {
   background: #1e1823;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 100px;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .benefits-list {
+display: flex;
+  align-items: center;
+  gap: 70px;
 }
+
 .benefits-list-item {
+  flex-basis: calc((100%-80px)/3);
 }
 .benefits-item-title {
   font-weight: 600;
@@ -121,7 +211,9 @@ button {
 
 /* #region Ingredients */
 .ingredients-section {
+  margin-bottom: 100px;
 }
+
 .ingredients-title {
   font-weight: 600;
   font-size: 24px;
@@ -130,18 +222,49 @@ button {
   text-transform: uppercase;
   text-align: center;
   color: #111;
-  text-transform: uppercase;
+  max-width: 411px;
+  margin: 0 auto 28px auto;
+
 }
 
 .ingredients-text {
   text-align: center;
-}
-.ingredients-list {
-}
-.ingredients-list-item {
-  background: #fd9222;
+  max-width: 486px;
+  margin: 0 auto 50px auto;
 }
 
+.ingredients-list {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.ingredients-list-item {
+  background-color: #fff;
+  max-width: 270px;
+  flex-basis:((100%-19*3px)/4);
+  border: 1px solid #fd9222;
+border-radius: 15px;
+width: 270px;
+height: 270px;
+}
+
+.ingredients-list-item:nth-child(4n+1) {
+  background: #fd9222;
+  border: none;
+}
+
+.ingredients-list-item:nth-child(4n+3) {
+  background-color: #1e1823;
+  border: none;
+}
+
+.ingredients-image{
+  padding-top: 28px;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-bottom: 0;
+}
 .ingredients-item-desc {
   font-weight: 600;
   font-size: 14px;
@@ -149,31 +272,22 @@ button {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #fff;
+  padding-left: 32px;
+  padding-bottom: 28px;
 }
-/* .ingredients-list-item m {
-  background-color: #fff;
-}
-.ingredients-item-desc m {
+
+.black-desc {
   color: #111;
 }
-.ingredients-list-item n {
-  background-color: #1e1823;
-}
-.ingredients-item-desc n {
-  color: #fff;
-}
-.ingredients-list-item s {
-  background-color: #fff;
-}
-.ingredients-item-desc s {
-color: #111;
-} */
+
 /* #endregion Ingredients */
 
 /* #region How it's made? */
 .made-section {
   background-color: #fff;
+  margin-bottom: 100px;
 }
+
 .made-title {
   font-weight: 600;
   font-size: 24px;
@@ -182,39 +296,86 @@ color: #111;
   text-transform: uppercase;
   text-align: center;
   color: #111;
+  margin-bottom: 50px;
 }
+
+.made-container{
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.made-image{
+border-radius: 15px;
+}
+
+.made-description{
+max-width: 452px;
+}
+
 .made-subtitle {
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33333;
   color: #111;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 28px;
 }
+
 .made-list {
   list-style-type: disc;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 24px;
 }
+
 .made-list-item {
 }
+
 .made-item-text {
 }
 /* #endregion How it's made? */
 
 /* #region Chocolate is loved */
 .chocolate-section {
+  margin-bottom: 100px;
 }
+
 .chocolate-title {
   font-weight: 600;
   font-size: 24px;
-  line-height: 1.16667;
+  line-height: 1.16;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   text-align: center;
   color: #111;
 }
+
 .chocolate-list {
+display: flex;
+align-items: center;
+gap: 28px;
+margin-bottom: 50px;
 }
+
 .chocolate-list-item {
+flex-basis: ((100%-56px)/3);
+border: 1px solid rgba(17, 17, 17, 0.1);
+border-radius: 15px;
+width: 360px;
+box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
+background: #fff;
 }
+
+.chocolate-image {
+ padding-left: 140px;
+ padding-right: 140px;
+ margin-bottom: 18px;
+}
+
 .chocolate-item-title {
+  margin-bottom: 24px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
@@ -223,13 +384,26 @@ color: #111;
 }
 .chocolate-item-text {
   text-align: center;
+  max-width: 312px;
   color: rgba(17, 17, 17, 0.7);
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
 }
+
 .chocolate-button {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #fd9222;
+  border-radius: 100px;
+  padding: 14px 40px;
+  width: 222px;
+  height: 50px;
   font-weight: 600;
   font-size: 18px;
   color: #111;
 }
+
 .chocolate-button:hover,
 .chocolate-button:focus {
   color: #fff;
@@ -241,18 +415,33 @@ color: #111;
 .footer {
   background-color: #1e1823;
 }
+
+.footer-container{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-top: 50px;
+margin-bottom: 78px;
+}
+
 .footer-text {
+  max-width: 300px;
   font-weight: 500;
   font-size: 28px;
   line-height: 1.21;
   letter-spacing: -0.02em;
   color: #fff;
 }
+
+.footer-address-container{
+ 
+
+}
+
 .footer-desc {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.28;
-  text-align: center;
   color: #fff;
 }
 
@@ -271,9 +460,17 @@ color: #111;
   color: #fff;
   font-style: normal;
 }
+
 .footer-address-link:hover,
 .footer-address-link:focus {
   color: #fd9222;
+}
+
+.footer-nav-list{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 86px;
 }
 .nav-footer .item-nav-link {
   color: #fff;

@@ -19,76 +19,85 @@
   <body>
     <!-- #region Header -->
     <header class="header">
-      <a class="logo" href="./index.html"
-        >Simply <span class="logo-style">chocolate</span>
-      </a>
-      <nav class="nav-header">
-        <ul class="header-nav-list">
-          <li class="nav-header-item">
-            <a class="item-nav-link" href="./index.html">Home</a>
-          </li>
-          <li class="nav-header-item">
-            <a class="item-nav-link" href="#made">How it's made?</a>
-          </li>
-          <li class="nav-header-item">
-            <a class="item-nav-link" href="#chocolate">Chocolate is loved</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="container header-container">
+        <a class="logo" href="./index.html"
+          >Simply <span class="logo-style">chocolate</span>
+        </a>
+        <nav class="nav-header">
+          <ul class="header-nav-list">
+            <li class="nav-header-item">
+              <a class="item-nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-header-item">
+              <a class="item-nav-link" href="#made">How it's made?</a>
+            </li>
+            <li class="nav-header-item">
+              <a class="item-nav-link" href="#chocolate">Chocolate is loved</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <!-- #endregion Header -->
 
     <main>
       <!-- #region Hero section -->
       <section class="hero">
-        <h1 class="hero-title">
-          Treat yourself or a loved one to our finest ingredients for a moment
-          of pure delight!
-        </h1>
-        <button class="hero-button" type="button">Buy now</button>
-        <a class="hero-link-made" href="#made">How it's made</a>
-        <a class="hero-link-footer" href="#footer">scroll down</a>
+        <div class="container">
+          <h1 class="hero-title">
+            Treat yourself or a loved one to our finest ingredients for a moment
+            of pure delight!
+          </h1>
+          <div class="hero-buttons">
+            <button class="hero-button" type="button">Buy now</button>
+            <a class="hero-link-made" href="#made">How it's made</a>
+            <a class="hero-link-down" href="#footer">scroll down</a>
+          </div>
+        </div>
       </section>
       <!-- #endregion  Hero section-->
 
       <!-- #region Benefits -->
       <section class="benefits-section">
-        <h2 hidden>Benefits</h2>
-        <ul class="benefits-list">
-          <li class="benefits-list-item">
-            <h3 class="benefits-item-title">Unsurpassed taste</h3>
-            <p class="benefits-item-text">
-              Crafted with the finest quality cocoa beans and a dedication to
-              perfection, each bite is a decadent experience that simply cannot
-              be matched. Savor the richness and complexity of our Unsurpassed
-              Taste and discover a new level of chocolate bliss.
-            </p>
-          </li>
-          <li class="benefits-list-item">
-            <h3 class="benefits-item-title">Affordable price</h3>
-            <p class="benefits-item-text">
-              Indulge in high-quality chocolate without breaking the bank with
-              Simply Chocolate's selection of affordable treats. Enjoy
-              mouth-watering truffles and velvety chocolate bars without
-              sacrificing taste or quality. Browse our selection and indulge in
-              affordable luxury today.
-            </p>
-          </li>
-          <li class="benefits-list-item">
-            <h3 class="benefits-item-title">Own production</h3>
-            <p class="benefits-item-text">
-              We take pride in our own production process, ensuring that every
-              step is carefully crafted to perfection. From selecting the finest
-              ingredients to handcrafting each piece, our attention to detail is
-              evident in every bite.
-            </p>
-          </li>
-        </ul>
+        <div class="container">
+        <h2 class="visually-hidden">Benefits</h2>
+                <ul class="benefits-list">
+            <li class="benefits-list-item">
+              <h3 class="benefits-item-title">Unsurpassed taste</h3>
+              <p class="benefits-item-text">
+                Crafted with the finest quality cocoa beans and a dedication to
+                perfection, each bite is a decadent experience that simply cannot
+                be matched. Savor the richness and complexity of our Unsurpassed
+                Taste and discover a new level of chocolate bliss.
+              </p>
+            </li>
+            <li class="benefits-list-item">
+              <h3 class="benefits-item-title">Affordable price</h3>
+              <p class="benefits-item-text">
+                Indulge in high-quality chocolate without breaking the bank with
+                Simply Chocolate's selection of affordable treats. Enjoy
+                mouth-watering truffles and velvety chocolate bars without
+                sacrificing taste or quality. Browse our selection and indulge in
+                affordable luxury today.
+              </p>
+            </li>
+            <li class="benefits-list-item">
+              <h3 class="benefits-item-title">Own production</h3>
+              <p class="benefits-item-text">
+                We take pride in our own production process, ensuring that every
+                step is carefully crafted to perfection. From selecting the finest
+                ingredients to handcrafting each piece, our attention to detail is
+                evident in every bite.
+              </p>
+            </li>
+          </ul>
+               </div>
       </section>
       <!-- #endregion Benefits -->
 
       <!-- #region Ingredients -->
       <section class="ingredients-section">
+        <div class="container">
         <h2 class="ingredients-title">
           It all adds up to one exceptional
           <span class="orange">taste</span> sensation
@@ -101,52 +110,55 @@
         </p>
         <ul class="ingredients-list">
           <li class="ingredients-list-item ">
-            <img
+            <img class="ingredients-image"
               src="./images/ingredients/chocolate.png"
               alt="Slices of chocolate"
             />
             <p class="ingredients-item-desc ">Milk chocolate</p>
           </li>
           <li class="ingredients-list-item">
-            <img
+            <img class="ingredients-image"
               src="./images/ingredients/milk.png"
               alt="A glass bottle of milk"
             />
-            <p class="ingredients-item-desc-m">Milk</p>
+            <p class="ingredients-item-desc black-desc">Milk</p>
           </li>
           <li class="ingredients-list-item">
-            <img
+            <img class="ingredients-image"
               src="./images/ingredients/nuts.png"
               alt="Two hazelnuts in shells and two hazelnuts in without shells"
             />
             <p class="ingredients-item-desc">Nuts</p>
           </li>
           <li class="ingredients-list-item">
-            <img
+            <img class="ingredients-image"
               src="./images/ingredients/semi.png"
               alt="A handful of chocolate chips"
             />
-            <p class="ingredients-item-desc">Semi - sweet chocolate</p>
+            <p class="ingredients-item-desc black-desc">Semi-sweet chocolate</p>
           </li>
         </ul>
+        </div>
       </section>
       <!-- #endregion Ingredients -->
 
       <!-- #region How it's made?-->
       <section class="made-section" id="made">
+        <div class="container">
         <h2 class="made-title">How it's <span class="orange">made?</span></h2>
-        <img
+        <div class="made-container">
+        <img class="made-image"
           src="./images/hot_chocolate.png"
           alt="Chocolate is dripping from the whisk into the bowl"
         />
+        <div class="made-description">
         <h3 class="made-subtitle">
           Try our chocolates today and discover the perfect balance of flavor
         </h3>
         <ul class="made-list">
           <li class="made-list-item">
             <p class="made-item-text">
-              Heat the milk in a saucepan without bringing it to a boil. Add
-              sugar and cocoa powder.
+              Heat the milk in a saucepan without bringing it to a boil. Add sugar and cocoa powder.
             </p>
           </li>
           <li class="made-list-item">
@@ -171,15 +183,19 @@
             </p>
           </li class="made-list-item">
         </ul>
+        </div>
+        </div>
+        </div>
       </section>
       <!-- #endregion How it's made?-->
 
       <!-- #region Chocolate is loved-->
       <section class="chocolate-section" id="chocolate">
+        <div class="container">
         <h2 class="chocolate-title"><span class="orange">Chocolate</span> is loved</h2>
-        <ul class="chocolate-list">
+              <ul class="chocolate-list">
           <li class="chocolate-list-item">
-            <img
+            <img class="chocolate-image"
               src="./images/review/victoria_dobrzhanska.jpg"
               alt="Photo of Victoria Dobrzhanska"
             />
@@ -190,7 +206,7 @@
             </p>
           </li>
           <li class="chocolate-list-item">
-            <img
+            <img class="chocolate-image"
               src="./images/review/nazar_babenko.jpg"
               alt="Photo of Nazar Babenko"
             />
@@ -202,7 +218,7 @@
             </p>
           </li>
           <li class="chocolate-list-item">
-            <img
+            <img class="chocolate-image"
               src="./images/review/olena_kampusch.jpg"
               alt="Photo of Olena Kampusch"
             />
@@ -214,14 +230,18 @@
             </p>
           </li>
         </ul>
-        <button class="chocolate-button" type="button">Leave a review</button>
+              <button class="chocolate-button" type="button">Leave a review</button>
+        </div>
       </section>
       <!-- #endregion Chocolate is loved-->
     </main>
 
     <!-- #region Footer -->
     <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-container">
       <p class="footer-text"><span class="orange">Chocolate</span> a delicious cure for a bad day</p>
+      <div class="footer-address-container">
       <p class="footer-desc">Contact us</p>
       <address class="footer-address">
         <ul class="footer-address-list">
@@ -231,6 +251,8 @@
           </li>
         </ul>
       </address>
+      </div>
+    </div>
       <nav class="nav-footer">
         <ul class="footer-nav-list">
           <li class="nav-footer-item">
@@ -244,6 +266,7 @@
           </li>
         </ul>
       </nav>
+      </div>
     </footer>
     <!-- #endregion Footer -->
   </body>
