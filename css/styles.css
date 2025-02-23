@@ -79,9 +79,6 @@ button {
 .icon-chocolate {
   margin-right: 447px;
 }
-/* .nav-header {
-  margin-right: 90px;
-} */
 
 .header-nav-list {
   display: flex;
@@ -93,18 +90,39 @@ button {
 .nav-header-item {
 }
 
-.item-nav-link {
+.nav-link {
   display: block;
   padding: 30px 0;
   font-weight: 500;
   line-height: 1.14;
   color: #111;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 0);
+  position: relative;
 }
 
-.item-nav-link:hover,
-.item-nav-link:focus {
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.current {
   color: #fd9222;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fd9222;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 0);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link.current::after {
+  opacity: 1;
 }
 
 .social-links-list {
@@ -113,10 +131,9 @@ button {
   gap: 20px;
 }
 
-/* .social-link {
- padding: 30px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 0);
-} */
+.social-link {
+  /* transition: color 200ms cubic-bezier(0.4, 0, 0.2, 0); */
+}
 
 .social-icon {
   padding: 30px 0;
@@ -363,7 +380,6 @@ button {
 
 .ingredients-list-item {
   background-color: #fff;
-  /* max-width: 270px; */
   flex-basis: ((100% - 19 * 3px) /4);
   border: 1px solid #fd9222;
   border-radius: 15px;
@@ -409,12 +425,14 @@ button {
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background-color: #fff;
-  padding: 20px;
+  padding-left: 20px;
   border-radius: 15px;
-  overflow: hidden;
+  overflow: auto;
   opacity: 0;
   transform: translateY(100%);
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -466,10 +484,11 @@ button {
 .overlay-description {
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.28571;
+  line-height: 1.28;
   letter-spacing: -0.02em;
   color: #111;
-  max-width: 230px;
+  max-width: 200px;
+  overflow: hidden;
 }
 
 /* #endregion Ingredients */
@@ -628,6 +647,7 @@ button {
   padding-bottom: 54px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   width: 1136px;
+  margin-bottom: 24px;
 }
 
 .footer-text {
@@ -647,6 +667,7 @@ button {
   font-size: 14px;
   line-height: 1.28;
   color: #fff;
+  margin-bottom: 14px;
 }
 
 .footer-address {
@@ -654,6 +675,7 @@ button {
 .footer-address-list {
 }
 .footer-address-item {
+  margin-bottom: 4px;
 }
 .footer-address-link {
   font-weight: 400;
