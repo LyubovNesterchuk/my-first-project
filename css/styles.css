@@ -538,9 +538,6 @@ button {
 }
 
 .made-list {
-  margin-left: 32px;
-  margin-right: 32px;
-  margin-bottom: 24px;
 }
 
 .made-list-item {
@@ -550,6 +547,9 @@ button {
   justify-content: start;
   gap: 8px;
   margin-bottom: 24px;
+}
+.made-icon-disk {
+  flex-shrink: 0;
 }
 
 .made-item-text {
