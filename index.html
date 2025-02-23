@@ -18,11 +18,14 @@
   </head>
   <body>
     <!-- #region Header -->
-    <header class="header">
+    <header class="section header">
       <div class="container header-container">
         <a class="logo" href="./index.html"
           >Simply <span class="logo-style">chocolate</span>
         </a>
+        <svg class="icon-chocolate" width="24" height="24">
+          <use href="./images/icons.svg#icon-chocolate"></use>
+        </svg>
         <nav class="nav-header">
           <ul class="header-nav-list">
             <li class="nav-header-item">
@@ -36,33 +39,57 @@
             </li>
           </ul>
         </nav>
+        <ul class="social-links-list">
+          <li class="social-link-item">
+            <a class="social-link" href="#">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-link-item">
+            <a class="social-link" href="#">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <!-- #endregion Header -->
 
     <main>
       <!-- #region Hero section -->
-      <section class="hero">
-        <div class="container">
+      <section class="section hero">
+        <div class="container hero-container">
           <h1 class="hero-title">
-            Treat yourself or a loved one to our finest ingredients for a moment
+            Treat yourself or a loved one to <br> our finest ingredients for a moment
             of pure delight!
           </h1>
-          <div class="hero-buttons">
+          <div class="hero-buttons-container">
             <button class="hero-button" type="button">Buy now</button>
             <a class="hero-link-made" href="#made">How it's made</a>
-            <a class="hero-link-down" href="#footer">scroll down</a>
+            <a class="hero-link-down" href="#footer">scroll down<div class="icon-Vector-container">
+            <svg class="icon-Vector" width="22" height="22">
+              <use href="./images/icons.svg#icon-Vector"></use>
+            </svg>
           </div>
+        </a>
+             </div>
         </div>
       </section>
       <!-- #endregion  Hero section-->
 
       <!-- #region Benefits -->
-      <section class="benefits-section">
+      <section class="section benefits-section">
         <div class="container">
         <h2 class="visually-hidden">Benefits</h2>
-                <ul class="benefits-list">
-            <li class="benefits-list-item">
+          <ul class="benefits-list">
+              <li class="benefits-list-item">
+               <div class="benefits-icon-container"><svg class="benefits-icon" width="32" height="32">
+                    <use href="./images/icons.svg#icon-chocolate-bar"></use>
+                  </svg></div>
               <h3 class="benefits-item-title">Unsurpassed taste</h3>
               <p class="benefits-item-text">
                 Crafted with the finest quality cocoa beans and a dedication to
@@ -72,6 +99,9 @@
               </p>
             </li>
             <li class="benefits-list-item">
+               <div class="benefits-icon-container"><svg class="benefits-icon" width="32" height="32">
+                    <use href="./images/icons.svg#icon-coin"></use>
+                  </svg></div>
               <h3 class="benefits-item-title">Affordable price</h3>
               <p class="benefits-item-text">
                 Indulge in high-quality chocolate without breaking the bank with
@@ -81,7 +111,10 @@
                 affordable luxury today.
               </p>
             </li>
-            <li class="benefits-list-item">
+              <li class="benefits-list-item">
+                 <div class="benefits-icon-container"><svg class="benefits-icon" width="32" height="32">
+                    <use href="./images/icons.svg#icon-spoon"></use>
+                  </svg></div>
               <h3 class="benefits-item-title">Own production</h3>
               <p class="benefits-item-text">
                 We take pride in our own production process, ensuring that every
@@ -96,7 +129,7 @@
       <!-- #endregion Benefits -->
 
       <!-- #region Ingredients -->
-      <section class="ingredients-section">
+      <section class="section ingredients-section">
         <div class="container">
         <h2 class="ingredients-title">
           It all adds up to one exceptional
@@ -109,41 +142,95 @@
           step of our process adds up to one exceptional taste sensation.
         </p>
         <ul class="ingredients-list">
-          <li class="ingredients-list-item ">
-            <img class="ingredients-image"
-              src="./images/ingredients/chocolate.png"
-              alt="Slices of chocolate"
-            />
-            <p class="ingredients-item-desc ">Milk chocolate</p>
+          <!-- <div class="ingredients-list-container"> -->
+            <li class="ingredients-list-item ">
+              <img class="ingredients-image"
+                src="./images/ingredients/chocolate.png"
+                alt="Slices of chocolate"
+              />
+              <p class="ingredients-item-desc ">Milk chocolate</p>
+          <!-- </div> -->
+          <div class="overlay-container"><h3 class="overlay-title">Milk chocolate</h3>
+            <ul class="overlay-button-list">
+              <li class="overlay-button-item">
+                <button class="overlay-button" type="button">chocolate</button>
+              </li>
+              <li class="overlay-button-item">
+                <button class="overlay-button-benefits" type="button">the benefits</button>
+              </li>
+            </ul>
+            <p class="overlay-description">Milk chocolate is a solid chocolate confectionery containing cocoa, sugar and milk. It is the most consumed type of chocolate. Chocolate was originally sold and consumed as a beverage in pre-Columbian times. Although four-fifths of all milk chocolate is sold in the United States and Europe.</p>
+          </div>
           </li>
           <li class="ingredients-list-item">
+            <!-- <div class="ingredients-list-container"> -->
             <img class="ingredients-image"
               src="./images/ingredients/milk.png"
               alt="A glass bottle of milk"
             />
             <p class="ingredients-item-desc black-desc">Milk</p>
+          <!-- </div> -->
+          <div class="overlay-container">
+            <h3 class="overlay-title">Milk</h3>
+            <ul class="overlay-button-list">
+              <li class="overlay-button-item">
+                <button class="overlay-button" type="button">milk </button>
+              </li>
+              <li class="overlay-button-item">
+                <button class="overlay-button-benefits" type="button">the benefits</button>
+              </li>
+            </ul>
+            <p class="overlay-description">Milk is a white liquid food produced by the mammary glands of mammals. It is the primary source of nutrition for young mammals (including breastfed human infants) before they are able to digest solid food.Early-lactation milk, which is called colostrum, contains antibodies that strengthen the ...</p>
+          </div>
           </li>
           <li class="ingredients-list-item">
+           <!-- <div class="ingredients-list-container"> -->
             <img class="ingredients-image"
               src="./images/ingredients/nuts.png"
               alt="Two hazelnuts in shells and two hazelnuts in without shells"
             />
             <p class="ingredients-item-desc">Nuts</p>
+          <!-- </div> -->
+          <div class="overlay-container">
+            <h3 class="overlay-title">Nuts</h3>
+            <ul class="overlay-button-list">
+              <li class="overlay-button-item">
+                <button class="overlay-button" type="button">nuts</button>
+              </li>
+              <li class="overlay-button-item">
+                <button class="overlay-button-benefits" type="button">the benefits</button>
+              </li>
+            </ul>
+            <p class="overlay-description">Almonds, pistachios, and walnuts are some types of nuts that contain healthy nutrients. When eaten as part of a nutrient-dense diet, these 9 nuts may offer benefits such as reducing your risk of heart disease. They’re a good source of fiber, healthy fats, and plant protein. Plus, they’re great on their own.</p>
+          </div>
           </li>
           <li class="ingredients-list-item">
+            <!-- <div class="ingredients-list-container"> -->
             <img class="ingredients-image"
               src="./images/ingredients/semi.png"
               alt="A handful of chocolate chips"
             />
             <p class="ingredients-item-desc black-desc">Semi-sweet chocolate</p>
-          </li>
+          <!-- </div> -->
+                   <div class="overlay-container">
+            <h3 class="overlay-title">semi - sweet chocolate</h3>
+            <ul class="overlay-button-list">
+              <li class="overlay-button-item">
+                <button class="overlay-button" type="button">sweet chocolate</button>
+              </li>
+              <li class="overlay-button-item"><button class="overlay-button-benefits" type="button">the benefits</button>
+              </li>
+            </ul>
+            <p class="overlay-description">Semi-sweet chocolate has a cocoa solid content of 35 to 65%. One of the best ways to gain an understanding of this type of chocolate is to compare it to a different type of chocolate. Semisweet is darker than milk chocolate. In a taste comparison, it has a slightly bitter taste whereas milk chocolate is sweeter and more mellow. </p>
+          </div>
+           </li>
         </ul>
         </div>
       </section>
       <!-- #endregion Ingredients -->
 
       <!-- #region How it's made?-->
-      <section class="made-section" id="made">
+      <section class="section made-section" id="made">
         <div class="container">
         <h2 class="made-title">How it's <span class="orange">made?</span></h2>
         <div class="made-container">
@@ -157,16 +244,25 @@
         </h3>
         <ul class="made-list">
           <li class="made-list-item">
+            <svg class="made-icon-disk" width="8" height="8">
+              <use href="./images/icons.svg#icon-disk"></use>
+            </svg>
             <p class="made-item-text">
               Heat the milk in a saucepan without bringing it to a boil. Add sugar and cocoa powder.
             </p>
           </li>
           <li class="made-list-item">
+            <svg class="made-icon-disk" width="8" height="8">
+              <use href="./images/icons.svg#icon-disk"></use>
+            </svg>
             <p class="made-item-text">
               At the same time, prepare a water bath. Melt the butter on it.
             </p>
           </li>
           <li class="made-list-item">
+            <svg class="made-icon-disk" width="8" height="8">
+              <use href="./images/icons.svg#icon-disk"></use>
+            </svg>
             <p class="made-item-text">
               "Mix" the milk mixture and already liquid butter. Mix thoroughly
               with a silicone spatula so that the mass becomes uniform and
@@ -174,9 +270,15 @@
             </p>
           </li>
           <li class="made-list-item">
+            <svg class="made-icon-disk" width="8" height="8">
+              <use href="./images/icons.svg#icon-disk"></use>
+            </svg>
             <p class="made-item-text">Heat the mixture over low heat, letting it barely boil.</p>
           </li>
           <li class="made-list-item">
+            <svg class="made-icon-disk" width="8" height="8">
+              <use href="./images/icons.svg#icon-disk"></use>
+            </svg>
             <p class="made-item-text">
               Pour the chocolate into special containers (can be replaced with
               ice molds). Allow to cool and harden.
@@ -190,25 +292,25 @@
       <!-- #endregion How it's made?-->
 
       <!-- #region Chocolate is loved-->
-      <section class="chocolate-section" id="chocolate">
+      <section class="section chocolate-section" id="chocolate">
         <div class="container">
         <h2 class="chocolate-title"><span class="orange">Chocolate</span> is loved</h2>
               <ul class="chocolate-list">
           <li class="chocolate-list-item">
             <img class="chocolate-image"
-              src="./images/review/victoria_dobrzhanska.jpg"
-              alt="Photo of Victoria Dobrzhanska"
+              src="./images/review/victoria_dobrzhanska.png"
+              alt="Photo of Victoria Dobrzhanska"  width="80" height="80"
             />
-            <h3 class="chocolate-item-title">Victoria Dobrzhanska</h3>
-            <p class="chocolate-item-text">
-              I love this chocolate bar. Perfect combination of light crispy
-              wafer, covered in a thin layer chocolate.
-            </p>
-          </li>
+           <h3 class="chocolate-item-title">Victoria Dobrzhanska</h3>
+              <p class="chocolate-item-text">
+                I love this chocolate bar. Perfect combination of light crispy
+                wafer, covered in a thin layer chocolate.
+              </p>
+                      </li>
           <li class="chocolate-list-item">
             <img class="chocolate-image"
-              src="./images/review/nazar_babenko.jpg"
-              alt="Photo of Nazar Babenko"
+              src="./images/review/nazar_babenko.png"
+              alt="Photo of Nazar Babenko" width="80" height="80"
             />
             <h3 class="chocolate-item-title">Nazar Babenko</h3>
             <p class="chocolate-item-text">
@@ -218,9 +320,9 @@
             </p>
           </li>
           <li class="chocolate-list-item">
-            <img class="chocolate-image"
-              src="./images/review/olena_kampusch.jpg"
-              alt="Photo of Olena Kampusch"
+               <img class="chocolate-image"
+              src="./images/review/olena_kampusch.png"
+              alt="Photo of Olena Kampusch" width="80" height="80"
             />
             <h3 class="chocolate-item-title">Olena Kampusch</h3>
               <p class="chocolate-item-text">
