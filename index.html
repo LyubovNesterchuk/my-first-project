@@ -403,7 +403,9 @@
               </p>
             </li>
           </ul>
-          <button class="chocolate-button" type="button">Leave a review</button>
+          <button class="chocolate-button" type="button" data-modal-open>
+            Leave a review
+          </button>
         </div>
       </section>
       <!-- #endregion Chocolate is loved-->
@@ -470,11 +472,12 @@
     </footer>
     <!-- #endregion Footer -->
 
-    <!-- #region modal-window -->
-    <div class="backdrop is-open" data-modal>
-      <div class="modal-container">
-        <button class="close-btn" type="button" data-modal-close>
-          <svg class="close-dtn-icon" width="28" height="28">
+    <!-- #region modal -->
+    <!-- is-open -->
+    <div class="backdrop" data-modal>
+      <div class="modal">
+        <button class="close-button" type="button" data-modal-close>
+          <svg class="close-button-icon" width="28" height="28">
             <use href="./images/icons.svg#icon-x-close"></use>
           </svg>
         </button>
@@ -484,7 +487,7 @@
         </p>
 
         <form class="modal-form">
-          <div class="modal-container-block">
+          <div class="modal-form-field">
             <label class="modal-form-label" for="user-name">Name</label>
             <div class="modal-form-input-container">
               <input
@@ -492,18 +495,16 @@
                 id="user-name"
                 type="text"
                 name="user-name"
-                title="Lyubov"
                 placeholder="Lyubov"
-                pattern="[a-zA-Zа-яА-ЯїЇєЄіІ]+"
                 required
               />
-              <svg class="form-icon" width="24" height="24">
+              <svg class="modal-form-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-user"></use>
               </svg>
             </div>
           </div>
 
-          <div class="modal-container-block">
+          <div class="modal-form-field">
             <label class="modal-form-label" for="user-email">Email</label>
             <div class="modal-form-input-container">
               <input
@@ -512,16 +513,15 @@
                 type="email"
                 name="user-email"
                 placeholder="test@gmail.com"
-                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                 required
               />
-              <svg class="form-icon" width="24" height="24">
+              <svg class="modal-form-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
             </div>
           </div>
 
-          <div class="modal-container-block">
+          <div class="modal-form-field">
             <label class="modal-form-label" for="user-tel">Phone number</label>
             <div class="modal-form-input-container">
               <input
@@ -530,19 +530,18 @@
                 type="tel"
                 name="user-tel"
                 placeholder="xxx-xxx-xx-xx"
-                pattern="\d{3}-\d{3}-\d{2}-\d{2}"
                 required
               />
-              <svg class="form-icon" width="24" height="24">
+              <svg class="modal-form-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </div>
           </div>
 
-          <div class="cont-user-text">
+          <div class="modal-form-field">
             <label class="modal-form-label" for="user-comment">Comment</label>
             <textarea
-              class="user-comment"
+              class="modal-form-input comment"
               name="user-comment"
               id="user-comment"
               placeholder="Enter text"
@@ -553,25 +552,24 @@
             <input
               class="checkbox visually-hidden"
               type="checkbox"
-              id="user-privacy"
+              id="user-checkbox"
               value="true"
-              name="user-privacy"
+              required
             />
-            <label class="checkbox-label" for="user-privacy">
+            <label class="modal-form-label-checkbox" for="user-checkbox">
               <span class="custom-checkbox">
-                <svg class="icon-checkmark" width="10" height="10">
+                <svg class="modal-form-icon-check" width="10" height="10">
                   <use href="./images/icons.svg#icon-checkmark"></use>
                 </svg> </span
               >I accept the terms and conditions of the
-              <a class="privacy-link" href="#">Privacy Policy</a>
-            </label>
+              <a class="modal-form-link" href="#">Privacy Policy</a></label
+            >
           </div>
-
-          <button class="form-send-button" type="submit">Send</button>
+          <button class="modal-submit-button" type="submit">Send</button>
         </form>
       </div>
     </div>
-    <!-- #endregion modal-window -->
+    <!-- #region modal -->
     <script src="./js/modal.js"></script>
   </body>
 </html>

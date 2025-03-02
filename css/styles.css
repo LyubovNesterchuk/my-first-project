@@ -739,7 +739,7 @@ button {
 .nav-footer .item-nav-link:focus {
   color: #fd9222;
 }
-.footer-form-label {
+.footer-form {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -752,6 +752,7 @@ button {
   padding: 13px 24px;
   width: 313px;
   height: 52px;
+  box-sizing: border-box;
   outline: none;
   background-color: transparent;
   font-weight: 400;
@@ -773,6 +774,8 @@ button {
 }
 
 .subscribe-button {
+  display: block;
+  box-sizing: border-box;
   border-radius: 100px;
   padding: 17px 32px;
   width: 137px;
@@ -793,7 +796,7 @@ button {
 
 /* #endregion Footer */
 
-/* #region modal-window */
+/* #region modal */
 .backdrop {
   position: fixed;
   top: 0;
@@ -801,59 +804,56 @@ button {
   width: 100%;
   height: 100%;
   opacity: 0;
-  visibility: hidden;
+  visibility: 0;
   pointer-events: none;
-  z-index: 9;
-  background-color: rgba(30, 24, 35, 0.4);
-  transition: 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: pointer-events, visibility, opacity;
+  background-color: rgba(17, 17, 17, 0.7);
+  transition: opacity 250ms cubic-bezier(0.23, 1, 0.4, 1),
+    visibility 250ms cubic-bezier(0.23, 1, 0.4, 1);
 }
-
 .backdrop.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
-.modal-container-block {
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   border-radius: 15px;
   width: 517px;
-  min-height: 794px;
-  background: #fafafa;
+  height: 794px;
   padding: 38px 40px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+  background: #fafafa;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.23, 1, 0.4, 1);
+}
+.backdrop:not(.is-open) {
+  transform: translate(-50%, -50%) scale(1.5);
 }
 
-.backdrop:not(.is-open) .modal {
-  transform: translateY(-50%);
-}
-
-.close-btn {
+.close-button {
   position: absolute;
   top: 24px;
   right: 24px;
+  stroke: #111;
   padding: 0;
-  border: none;
   line-height: 0;
+  border: 0;
   background-color: transparent;
-  stroke: #1e1823;
-  /* z-index: 1; */
-  transition: stroke 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: stroke 250ms cubic-bezier(0.23, 1, 0.4, 1);
 }
 
-.close-btn:focus,
-.close-btn:hover {
+.close-button:focus,
+.close-button:hover {
   stroke: #fd9222;
 }
 
 .modal-text {
   font-weight: 600;
   font-size: 24px;
-  line-height: 1.17;
+  line-height: 1.16667;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #111;
@@ -861,17 +861,17 @@ button {
   margin-bottom: 42px;
 }
 
-.modal-container-block {
+.modal-form-field {
   margin-bottom: 18px;
 }
 
-.form-label {
+.modal-form-label {
   display: block;
-  margin-bottom: 8px;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: -0.02em;
   color: rgba(64, 64, 64, 0.3);
+  margin-bottom: 8px;
 }
 
 .modal-form-input-container {
@@ -879,16 +879,27 @@ button {
 }
 
 .modal-form-input {
-  width: 100%;
-  height: 68px;
+  box-sizing: border-box;
   border: 1px solid rgba(17, 17, 17, 0.05);
   border-radius: 13px;
+  padding: 22px 24px;
+  width: 100%;
+  height: 68px;
   outline: transparent;
   padding-left: 62px;
   font-weight: 400;
   font-size: 18px;
   letter-spacing: -0.02em;
   color: rgb(64, 64, 64);
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  stroke: #1e1823;
+  fill: transparent;
+  transform: translateY(-50%);
 }
 
 .modal-form-input::placeholder {
@@ -898,93 +909,72 @@ button {
   color: rgba(64, 64, 64, 0.3);
 }
 
-.form-icon {
-  position: absolute;
-  top: 50%;
-  left: 24px;
-  transform: translateY(-50%);
-  stroke: #404040;
-  fill: transparent;
-  cursor: pointer;
-}
-
 .modal-form-input:focus {
   border: 1px solid #fd9222;
 }
 
-.modal-form-input:focus + .form-icon {
+.modal-form-input:focus + .modal-form-icon {
   stroke: #fd9222;
 }
 
-.cont-user-text {
-  margin-bottom: 25px;
-}
-
-.user-comment {
-  border: 1px solid rgba(17, 17, 17, 0.05);
-  border-radius: 13px;
-  padding: 22px 24px;
-  width: 436px;
+.modal-form-input.comment {
   height: 137px;
   resize: none;
-  font-weight: 400;
-  font-size: 18px;
-  letter-spacing: -0.02em;
-  color: rgb(64, 64, 64);
+  padding-left: 24px;
 }
 
-.user-comment::placeholder {
-  font-weight: 400;
-  font-size: 18px;
-  letter-spacing: -0.02em;
-  color: rgba(64, 64, 64, 0.3);
+.modal-form-cont-checkbox {
+  margin-bottom: 40px;
 }
 
-.user-comment:focus {
-  border: 1px solid #fd9222;
-  outline: transparent;
+.custom-checkbox {
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
 }
 
-.checkbox-label {
-  cursor: pointer;
+.checkbox:checked + .modal-form-label-checkbox > .custom-checkbox {
+  background-color: #fd9222;
+  border: transparent;
+  fill: #ffff;
+}
+
+.modal-form-label-checkbox {
   font-weight: 400;
   font-size: 14px;
   letter-spacing: -0.02em;
   color: rgba(64, 64, 64, 0.6);
 }
 
-.checkbox-label .privacy-link {
+.modal-form-link {
   text-decoration: underline;
   color: #fd9222;
 }
 
-.custom-checkbox {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  border: 1px solid rgba(17, 17, 17, 0.14);
-  /* margin-bottom: 40px; */
-  margin-right: 12px;
-  width: 20px;
-  height: 20px;
-}
-
-.checkbox:checked + .checkbox-label > .custom-checkbox {
-  border: transparent;
-  fill: #00ffff;
-  background-color: #fd9222;
-}
-
-.form-send-button {
+.modal-submit-button {
   border-radius: 100px;
   padding: 14px 40px;
   width: 117px;
   height: 45px;
   background-color: #fd9222;
-  border: none;
   font-weight: 600;
   font-size: 14px;
   color: #fff;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.23, 1, 0.4, 1),
+    color 250ms cubic-bezier(0.23, 1, 0.4, 1),
+    border 250ms cubic-bezier(0.23, 1, 0.4, 1);
 }
-/* #endregion modal-window */
+
+.modal-submit-button:focus,
+.modal-submit-button:hover {
+  background-color: #fcf1e0;
+  color: #fd9222;
+  border: 1px solid #fd9222;
+}
