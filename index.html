@@ -26,6 +26,11 @@
         <svg class="icon-chocolate" width="24" height="24">
           <use href="./images/icons.svg#icon-chocolate"></use>
         </svg>
+        <button class="burger-btn" type="button" data-menu-open>
+          <svg class="icon-burger-menu" width="28" height="28">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
         <nav class="nav-header">
           <ul class="header-nav-list">
             <li class="nav-header-item">
@@ -59,13 +64,54 @@
     </header>
     <!-- #endregion Header -->
 
+    <!-- #region menu -->
+    <div class="backdrop-menu" data-menu>
+      <div class="menu">
+        <button class="menu-close-btn" type="button" data-menu-close>
+          <svg class="menu-icon-close" width="28" height="28">
+            <use href="./images/icons.svg#icon-x-close"></use>
+          </svg>
+        </button>
+        <nav class="nav-menu">
+          <ul class="menu-nav-list">
+            <li class="nav-menu-item">
+              <a class="menu-nav-link current" href="./index.html">Home</a>
+            </li>
+            <li class="nav-menu-item">
+              <a class="menu-nav-link" href="#made">How it's made?</a>
+            </li>
+            <li class="nav-menu-item">
+              <a class="menu-nav-link" href="#chocolate">Chocolate is loved</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="social-menu-list">
+          <li class="social-menu-item">
+            <a class="social-menu-link" href="#">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-menu-item">
+            <a class="social-menu-link" href="#">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- #endregion menu -->
+
     <main>
       <!-- #region Hero section -->
       <section class="section hero">
         <div class="container hero-container">
           <h1 class="hero-title">
-            Treat yourself or a loved one to <br />
-            our finest ingredients for a moment of pure delight!
+            Treat yourself or a loved one to our finest ingredients for a moment
+            of pure delight!
           </h1>
           <div class="hero-buttons-container">
             <button class="hero-button" type="button">Buy now</button>
@@ -151,14 +197,28 @@
           </p>
           <ul class="ingredients-list">
             <li class="ingredients-list-item">
-              <!-- <div class="ingredients-list-container"> -->
-              <img
-                class="ingredients-image"
-                src="./images/ingredients/chocolate.png"
-                alt="Slices of chocolate"
-              />
+              <picture class="ingredients-image">
+                <source
+                  srcset="
+                    ./images/ingredients/chocolate-desktop.png    1x,
+                    ./images/ingredients/chocolate-desktop@2x.png 2x
+                  "
+                  media="(min-width: 1168px)"
+                />
+                <source
+                  srcset="
+                    ./images/ingredients/chocolate.png    1x,
+                    ./images/ingredients/chocolate@2x.png 2x
+                  "
+                  media="(max-width: 1167px)"
+                />
+                <img
+                  src="./images/ingredients/chocolate.png"
+                  alt="Slices of chocolate"
+                />
+              </picture>
               <p class="ingredients-item-desc">Milk chocolate</p>
-              <!-- </div> -->
+
               <div class="overlay-container">
                 <h3 class="overlay-title">Milk chocolate</h3>
                 <ul class="overlay-button-list">
@@ -183,14 +243,28 @@
               </div>
             </li>
             <li class="ingredients-list-item">
-              <!-- <div class="ingredients-list-container"> -->
-              <img
-                class="ingredients-image"
-                src="./images/ingredients/milk.png"
-                alt="A glass bottle of milk"
-              />
+              <picture class="ingredients-image">
+                <source
+                  srcset="
+                    ./images/ingredients/milk-desktop.png    1x,
+                    ./images/ingredients/milk-desktop@2x.png 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+                <source
+                  srcset="
+                    ./images/ingredients/milk.png    1x,
+                    ./images/ingredients/milk@2x.png 2x
+                  "
+                  media="(max-width: 1157px)"
+                />
+                <img
+                  src="./images/ingredients/milk.png"
+                  alt="A glass bottle of milk"
+                />
+              </picture>
               <p class="ingredients-item-desc black-desc">Milk</p>
-              <!-- </div> -->
+
               <div class="overlay-container">
                 <h3 class="overlay-title">Milk</h3>
                 <ul class="overlay-button-list">
@@ -208,19 +282,34 @@
                   mammals. It is the primary source of nutrition for young
                   mammals (including breastfed human infants) before they are
                   able to digest solid food.Early-lactation milk, which is
-                  called colostrum, contains antibodies that strengthen the ...
+                  called colostrum, contains antibodies that strengthen the
+                  immune system.
                 </p>
               </div>
             </li>
             <li class="ingredients-list-item">
-              <!-- <div class="ingredients-list-container"> -->
-              <img
-                class="ingredients-image"
-                src="./images/ingredients/nuts.png"
-                alt="Two hazelnuts in shells and two hazelnuts in without shells"
-              />
+              <picture class="ingredients-image">
+                <source
+                  srcset="
+                    ./images/ingredients/nuts-desktop.png    1x,
+                    ./images/ingredients/nuts-desktop@2x.png 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+                <source
+                  srcset="
+                    ./images/ingredients/nuts.png    1x,
+                    ./images/ingredients/nuts@2x.png 2x
+                  "
+                  media="(max-width: 1157px)"
+                />
+                <img
+                  src="./images/ingredients/nuts.png"
+                  alt="Two hazelnuts in shells and two hazelnuts in without shells"
+                />
+              </picture>
               <p class="ingredients-item-desc">Nuts</p>
-              <!-- </div> -->
+
               <div class="overlay-container">
                 <h3 class="overlay-title">Nuts</h3>
                 <ul class="overlay-button-list">
@@ -244,16 +333,30 @@
               </div>
             </li>
             <li class="ingredients-list-item">
-              <!-- <div class="ingredients-list-container"> -->
-              <img
-                class="ingredients-image"
-                src="./images/ingredients/semi.png"
-                alt="A handful of chocolate chips"
-              />
+              <picture class="ingredients-image">
+                <source
+                  srcset="
+                    ./images/ingredients/semi-desktop.png    1x,
+                    ./images/ingredients/semi-desktop@2x.png 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+                <source
+                  srcset="
+                    ./images/ingredients/semi.png    1x,
+                    ./images/ingredients/semi@2x.png 2x
+                  "
+                  media="(max-width: 1157px)"
+                />
+                <img
+                  src="./images/ingredients/semi.png"
+                  alt="A handful of chocolate chips"
+                />
+              </picture>
               <p class="ingredients-item-desc black-desc">
                 Semi-sweet chocolate
               </p>
-              <!-- </div> -->
+
               <div class="overlay-container">
                 <h3 class="overlay-title">semi - sweet chocolate</h3>
                 <ul class="overlay-button-list">
@@ -288,11 +391,34 @@
         <div class="container">
           <h2 class="made-title">How it's <span class="orange">made?</span></h2>
           <div class="made-container">
-            <img
-              class="made-image"
-              src="./images/hot_chocolate.png"
-              alt="Chocolate is dripping from the whisk into the bowl"
-            />
+            <picture class="made-image">
+              <source
+                srcset="
+                  ./images/made/madechoc-desktop.jpg    1x,
+                  ./images/made/madechoc-desktop@2x.jpg 2x
+                "
+                media="(min-width: 1158px)"
+              />
+              <source
+                srcset="
+                  ./images/made/madechoc-tablet.jpg    1x,
+                  ./images/made/madechoc-tablet@2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/made/madechoc-mobile.jpg    1x,
+                  ./images/made/madechoc-mobile@2x.jpg 2x
+                "
+                media="(max-width: 767px)"
+              />
+              <img
+                src="./images/made/madechoc-mobile.jpg"
+                alt="Chocolate is dripping from the whisk into the bowl"
+              />
+            </picture>
+
             <div class="made-description-container">
               <h3 class="made-subtitle">
                 Try our chocolates today and <br />
@@ -361,8 +487,12 @@
             <li class="chocolate-list-item">
               <img
                 class="chocolate-image"
-                src="./images/review/victoria_dobrzhanska.png"
-                alt="Photo of Victoria Dobrzhanska"
+                src="./images/review/victoria.png"
+                srcset="
+                  ./images/review/victoria.png    1x,
+                  ./images/review/victoria@2x.png 2x
+                "
+                alt="Photo of Victoria"
                 width="80"
                 height="80"
               />
@@ -375,8 +505,12 @@
             <li class="chocolate-list-item">
               <img
                 class="chocolate-image"
-                src="./images/review/nazar_babenko.png"
-                alt="Photo of Nazar Babenko"
+                src="./images/review/nazar.png"
+                srcset="
+                  ./images/review/nazar.png    1x,
+                  ./images/review/nazar@2x.png 2x
+                "
+                alt="Photo of Nazar"
                 width="80"
                 height="80"
               />
@@ -390,8 +524,12 @@
             <li class="chocolate-list-item">
               <img
                 class="chocolate-image"
-                src="./images/review/olena_kampusch.png"
-                alt="Photo of Olena Kampusch"
+                src="./images/review/olena.png"
+                srcset="
+                  ./images/review/olena.png    1x,
+                  ./images/review/olena@2x.png 2x
+                "
+                alt="Photo of Olena"
                 width="80"
                 height="80"
               />
@@ -403,6 +541,24 @@
               </p>
             </li>
           </ul>
+          <div class="menu-chocolate-image-container">
+            <button class="menu-image-btn" type="menu">
+              <svg class="icon-foto" width="29" height="13">
+                <use href="./images/icons.svg#icon-foto"></use>
+              </svg>
+            </button>
+            <button class="menu-image-btn" type="menu">
+              <svg class="icon-nofoto" width="13" height="13">
+                <use href="./images/icons.svg#icon-foto"></use>
+              </svg>
+            </button>
+            <button class="menu-image-btn" type="menu">
+              <svg class="icon-nofoto" width="13" height="13">
+                <use href="./images/icons.svg#icon-foto"></use>
+              </svg>
+            </button>
+          </div>
+
           <button class="chocolate-button" type="button" data-modal-open>
             Leave a review
           </button>
@@ -448,6 +604,12 @@
                 <a class="item-nav-link" href="#made">How it's made?</a>
               </li>
               <li class="nav-footer-item">
+                <a class="item-nav-link" href="#">Our products</a>
+              </li>
+              <li class="nav-footer-item">
+                <a class="item-nav-link" href="#">Top sellers</a>
+              </li>
+              <li class="nav-footer-item">
                 <a class="item-nav-link" href="#chocolate"
                   >Chocolate is loved</a
                 >
@@ -463,9 +625,7 @@
                 type="email"
                 placeholder="Enter your email"
             /></label>
-            <button class="subscribe-button" type="submit" data-modal-open>
-              Subscribe
-            </button>
+            <button class="subscribe-button" type="submit">Subscribe</button>
           </form>
         </div>
       </div>
@@ -561,15 +721,18 @@
                 <svg class="modal-form-icon-check" width="10" height="10">
                   <use href="./images/icons.svg#icon-checkmark"></use>
                 </svg> </span
-              >I accept the terms and conditions of the
-              <a class="modal-form-link" href="#">Privacy Policy</a></label
+              ><span class="privacy-text"
+                >I accept the terms and conditions of the
+                <a class="modal-form-link" href="#">Privacy Policy</a></span
+              ></label
             >
           </div>
           <button class="modal-submit-button" type="submit">Send</button>
         </form>
       </div>
     </div>
-    <!-- #region modal -->
+    <!-- #endregion modal -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
