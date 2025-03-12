@@ -1057,7 +1057,7 @@ button {
   border: 1px solid #fd9222;
   border-radius: 100px;
   padding: 14px 40px;
-  width: 222px;
+  min-width: 222px;
   height: 50px;
   font-weight: 600;
   font-size: 18px;
@@ -1340,14 +1340,15 @@ button {
   top: 50%;
   left: 50%;
   border-radius: 15px;
-  width: 366px;
-  min-height: 794px;
-  padding: 38px 40px;
+  width: 311px;
+  min-height: 619px;
+  padding: 24px 32px;
   box-sizing: border-box;
   background: #fafafa;
   transform: translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.23, 1, 0.4, 1);
 }
+
 .backdrop:not(.is-open) {
   transform: translate(-50%, -50%) scale(1.5);
 }
@@ -1405,13 +1406,13 @@ button {
   box-sizing: border-box;
   border: 1px solid rgba(17, 17, 17, 0.05);
   border-radius: 13px;
-  padding: 22px 24px;
+  padding: 14px 18px;
   width: 100%;
-  height: 68px;
+  height: 45px;
   outline: transparent;
-  padding-left: 62px;
+  padding-left: 60px;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 13px;
   letter-spacing: -0.02em;
   color: rgb(64, 64, 64);
 }
@@ -1419,7 +1420,7 @@ button {
 .modal-form-icon {
   position: absolute;
   top: 50%;
-  left: 24px;
+  left: 18px;
   stroke: #1e1823;
   fill: transparent;
   transform: translateY(-50%);
@@ -1427,7 +1428,7 @@ button {
 
 .modal-form-input::placeholder {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 13px;
   letter-spacing: -0.02em;
   color: rgba(64, 64, 64, 0.3);
 }
@@ -1441,9 +1442,9 @@ button {
 }
 
 .modal-form-input.comment {
-  height: 137px;
+  height: 90px;
   resize: none;
-  padding-left: 24px;
+  padding-left: 18px;
 }
 
 .modal-form-cont-checkbox {
@@ -1476,7 +1477,8 @@ button {
 
 .modal-form-label-checkbox {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 1.33;
   letter-spacing: -0.02em;
   color: rgba(64, 64, 64, 0.6);
 }
@@ -1512,6 +1514,7 @@ button {
   .modal {
     width: 517px;
     min-height: 794px;
+    padding: 38px 40px;
   }
 
   .modal-text {
@@ -1530,8 +1533,32 @@ button {
     margin-bottom: 18px;
   }
 
+  .modal-form-input {
+    padding: 22px 24px;
+    height: 68px;
+    font-size: 18px;
+  }
+
+  .modal-form-input::placeholder {
+    font-size: 18px;
+  }
+
+  .modal-form-icon {
+    left: 24px;
+  }
+
+  .modal-form-input.comment {
+    height: 137px;
+    padding-left: 24px;
+  }
+
   .modal-form-cont-checkbox {
     margin-bottom: 40px;
+  }
+
+  .modal-form-label-checkbox {
+    font-weight: 400;
+    font-size: 14px;
   }
 
   .modal-submit-button {
